@@ -81,7 +81,7 @@ export default function StatsPage({
     const end = new Date()
     end.setHours(23, 59, 59, 999)
     return { start: monthWindow.start, end }
-  }, [limitToToday, monthWindow.end, monthWindow.start])
+  }, [limitToToday, monthWindow])
 
   const countedExpenses = useMemo(() => {
     if (includeOtherInTotals) return expenses || []

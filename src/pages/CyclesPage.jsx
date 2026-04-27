@@ -24,15 +24,6 @@ function cycleFromStart(start) {
   return { start: s, end: e }
 }
 
-function currentCycleStart() {
-  const now = new Date()
-  const y = now.getFullYear()
-  const m = now.getMonth()
-  const d = now.getDate()
-  const startMonth = d >= 11 ? m : m - 1
-  return new Date(y, startMonth, 11, 0, 0, 0, 0)
-}
-
 function cycleStartFromDate(date) {
   const d = new Date(date)
   const y = d.getFullYear()

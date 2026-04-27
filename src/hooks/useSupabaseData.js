@@ -250,7 +250,11 @@ export function useSupabaseData() {
   }, [canUseDb, flushOutbox])
 
   useEffect(() => {
-    refresh()
+    // Avoid sync setState chain in effect body (eslint-plugin-react-hooks v7 rule).
+    const t = window.setTimeout(() => {
+      refresh()
+    }, 0)
+    return () => window.clearTimeout(t)
   }, [refresh])
 
   const api = useMemo(() => {
