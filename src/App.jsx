@@ -277,7 +277,7 @@ function AppInner() {
                 סטטיסטיקות
               </Link>
               <Link className="btn rounded-xl px-3 py-2" to="/cycles">
-                מחזורים
+                מחזורים לסוכות
               </Link>
             </nav>
           </div>
